@@ -5,7 +5,7 @@ const Return = () => {
     <div className="container">
       <div className="row">
         <div className="content-page tutorial-content">
-          <h1 className="h1-title">Chính sách đổi trả tại KITTY</h1>
+          <h1 className="h1-title">Chính sách đổi trả tại Cá Họa</h1>
           <p>
             <strong>1. Điều kiện đổi trả</strong>
           </p>
@@ -29,16 +29,14 @@ const Return = () => {
             Size:
           </p>
           <p>
-            + Các bạn có thể nhắn tin cho ICTSV&nbsp;để&nbsp;đổi hàng&nbsp;đúng
-            Size cho các bạn, KITTY có dịch vụ&nbsp;đổi trả hàng tận nhà cho các
+            + Các bạn có thể nhắn tin cho Fanpage&nbsp;để&nbsp;đổi hàng&nbsp;đúng
+            Size cho các bạn, Cá Họa có dịch vụ&nbsp;đổi trả hàng tận nhà cho các
             bạn ( Phí Ship các bạn tự thanh toán nhé !)
           </p>
           <p>
             <strong>- Sản phẩm&nbsp;được&nbsp;đổi là khi :</strong>
           </p>
           <p>+ Trong 3 ngày tính từ ngày nhận hàng.</p>
-          <p>+ Chưa qua sử dụng ( mặc , giặt )</p>
-          <p>+ Mạc , tag&nbsp;áo còn&nbsp;đầy&nbsp;đủ.</p>
           <p>+ Còn&nbsp;đầy&nbsp;đủ hóa&nbsp;đơn mua hàng.</p>
           <p>
             <strong></strong>

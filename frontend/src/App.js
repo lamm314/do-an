@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserHeader from "./components/User/UserHeader/UserHeader";
 import UserFooter from "./components/User/UserFooter/UserFooter";
 import UserHome from "./components/User/UserHome/UserHome";
-import Size from "./components/User/Size/Size";
 import Introduce from "./components/User/Introduce/Introduce";
 import BuyingGuide from "./components/User/Tutorial/BuyingGuide";
 import Security from "./components/User/Tutorial/Security";
@@ -23,6 +22,7 @@ import Test from "./components/Admin/Test/Test";
 import UsersInformation from "./components/Admin/UsersInformation/UsersInformation";
 import Checkout from "./components/User/Checkout/Checkout";
 import Profile from "./components/User/Profile/Profile";
+import Shop from "./components/User/Shop/Shop";
 import ScrollToTop from "./ScrollToTop";
 import ChangePassword from "./components/User/ChangePassword/ChangePassword";
 import OrdersHistory from "./components/User/OrdersHistory/OrdersHistory";
@@ -60,36 +60,33 @@ function App() {
             element={<UsersInformation />}
           ></Route>
           <Route path="/admin/test" element={<Test />}></Route>
-          <Route path="/size" element={<Size />}></Route>
           <Route path="/introduce" element={<Introduce />}></Route>
+          
           <Route
             path="/products/all"
             element={<Products type={"all"} title={"Tất cả sản phẩm"} />}
           ></Route>
           <Route
-            path="/products/tee"
-            element={<Products type={"tee"} title={"Tee KITTY"} />}
+            path="/products/tranh-lua"
+            element={<Products type={"tranh-lua"} title={"Tranh lụa"} />}
           ></Route>
           <Route
-            path="/products/jacket"
-            element={<Products type={"jacket"} title={"Jacket KITTY"} />}
+            path="/products/tranh-son-dau"
+            element={<Products type={"tranh-son-dau"} title={"Tranh sơn dầu"} />}
           ></Route>
           <Route
-            path="/products/accessories"
-            element={<Products type={"accessory"} title={"ACCESSORIES"} />}
+            path="/products/tranh-thuy-mac"
+            element={<Products type={"tranh-thuy-mac"} title={"Tranh thủy mặc"} />}
           ></Route>
           <Route
-            path="/products/pants"
-            element={<Products type={"Pants"} title={"Pants"} />}
+            path="/products/tranh-phun-son"
+            element={<Products type={"tranh-phun-son"} title={"Tranh phun sơn"} />}
           ></Route>
           <Route
-            path="/products/hoodie"
-            element={<Products type={"hoodie"} title={"Hoodie KITTY"} />}
+            path="/products/tranh-dau"
+            element={<Products type={"tranh-dau"} title={"Tranh dầu"} />}
           ></Route>
-          <Route
-            path="/products/sweater"
-            element={<Products type={"sweater"} title={"Sweater KITTY"} />}
-          ></Route>
+         
           <Route
             path="/products/sale"
             element={<Products type={"sale"} title={"Đang Giảm Giá"} />}
@@ -109,6 +106,7 @@ function App() {
           <Route path="/tutorial/contact" element={<Contact />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/shop" element={<Shop />}></Route>
           <Route
             path="/cart"
             element={

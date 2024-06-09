@@ -205,7 +205,7 @@ const ProductDetails = (props) => {
                 onClick={() => setSize(0)}
               ></input>
               <label htmlFor="S" className="charset">
-                S
+                60x80
               </label>
             </div>
             <div className="abox">
@@ -218,7 +218,7 @@ const ProductDetails = (props) => {
                 onClick={() => setSize(1)}
               ></input>
               <label htmlFor="M" className="charset">
-                M
+                120x180
               </label>
             </div>
             <div className="abox">
@@ -231,7 +231,7 @@ const ProductDetails = (props) => {
                 onClick={() => setSize(2)}
               ></input>
               <label htmlFor="L" className="charset">
-                L
+                180x240
               </label>
             </div>
             <div className="abox">
@@ -244,7 +244,7 @@ const ProductDetails = (props) => {
                 onClick={() => setSize(3)}
               ></input>
               <label htmlFor="XL" className="charset">
-                XL
+                240x480
               </label>
             </div>
           </div>
@@ -337,8 +337,8 @@ const ProductDetails = (props) => {
                       nhưng&nbsp;đặt nhầm Size:<br></br>
                     </p>
                     <p>
-                      + Các bạn có thể nhắn tin cho KITTY&nbsp;để&nbsp;đổi
-                      hàng&nbsp;đúng Size cho các bạn, KITTY có dịch vụ&nbsp;đổi
+                      + Các bạn có thể nhắn tin cho Cá Họa &nbsp;để&nbsp;đổi
+                      hàng&nbsp;đúng Size cho các bạn, Cá Họa có dịch vụ&nbsp;đổi
                       trả hàng tận nhà cho các bạn ( Phí Ship các bạn tự thanh
                       toán nhé!)
                     </p>
@@ -350,10 +350,7 @@ const ProductDetails = (props) => {
                     </p>
                     <div className="noname2">
                       <p>+ Trong 3 ngày tính từ ngày nhận hàng.</p>
-                      <p>
-                        + Chưa qua sử dụng ( mặc , giặt )<br></br>
-                      </p>
-                      <p>+ Mạc , tag&nbsp;áo còn&nbsp;đầy&nbsp;đủ.</p>
+          
                       <p>+ Còn&nbsp;đầy&nbsp;đủ hóa&nbsp;đơn mua hàng.</p>
                       <p>
                         <strong></strong>
@@ -376,7 +373,7 @@ const ProductDetails = (props) => {
                       <span className="wysiwyg-font-size-medium">
                         <strong>
                           <p className="title2">
-                            1. Hướng dẫn sử dụng website KITTY:
+                            1. Hướng dẫn sử dụng website Cá Họa:
                           </p>
                           <br></br>
                         </strong>
@@ -401,7 +398,7 @@ const ProductDetails = (props) => {
                     <p>
                       <span className="wysiwyg-font-size-medium"></span>
                       <span className="wysiwyg-font-size-medium"></span>- Các
-                      bước mua hàng tại&nbsp;Web KITTY:
+                      bước mua hàng tại&nbsp;Web Cá Họa:
                     </p>
                     <br />
                     <p>
@@ -424,7 +421,7 @@ const ProductDetails = (props) => {
                       (&nbsp;Đơn hàng thành công là khi các
                       bạn&nbsp;điền&nbsp;đầy&nbsp;đủ thông tin và chính xác, các
                       bạn cần&nbsp;điền&nbsp;đầy&nbsp;đủ thông tin và
-                      Mail&nbsp;để KITTY có thể xác nhận&nbsp;đơn hàng qua Mail
+                      Mail&nbsp;để Cá Họa có thể xác nhận&nbsp;đơn hàng qua Mail
                       cho các bạn.)
                     </p>
                     <p>
@@ -432,7 +429,7 @@ const ProductDetails = (props) => {
                         <strong>
                           <br></br>
                           <p className="title2">
-                            2. Hình thức mua hàng tại KITTY:
+                            2. Hình thức mua hàng tại Cá Họa:
                           </p>
                           <br></br>
                         </strong>
@@ -440,7 +437,7 @@ const ProductDetails = (props) => {
                     </p>
                     <p>
                       <span className="wysiwyg-font-size-medium noname1">
-                        - Các bạn có thể mua hàng tại&nbsp;Web KITTY bằng các
+                        - Các bạn có thể mua hàng tại&nbsp;Web Cá Họa bằng các
                         hình thức thanh toán sau&nbsp;đây:
                       </span>
                     </p>
@@ -458,9 +455,9 @@ const ProductDetails = (props) => {
                         <strong>
                           <u className="title2">Cách 2</u>
                         </strong>
-                        : Thanh toán chuyển khoảng trước cho KITTY&nbsp;(Trước
+                        : Thanh toán chuyển khoảng trước cho Cá Họa&nbsp;(Trước
                         khi CHUYỂN KHOẢN các bạn vui lòng nhắn tin trước cho
-                        KITTY qua Ins hoặc FB để chúng tôi kiểm tra và xác nhận
+                        Cá Họa qua Ins hoặc FB để chúng tôi kiểm tra và xác nhận
                         đơn hàng.)<br></br>
                       </span>
                       <br></br>

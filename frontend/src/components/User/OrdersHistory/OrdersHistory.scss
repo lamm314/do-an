@@ -23,6 +23,8 @@
 
 .h6-card{
     margin-bottom: 10px;
+    color: white;
+    font-size: large;
 }
 .track {
     position: relative;
@@ -42,11 +44,13 @@
     width: 25%;
     margin-top: -18px;
     text-align: center;
-    position: relative
+    position: relative;
+    
 }
 
 .track .step.active:before {
-    background: #fff;
+    background: #E89C31;
+    
 }
 
 .track .step::before {
@@ -59,8 +63,8 @@
 }
 
 .track .step.active .icon {
-    background: #fff;
-    color: #fff
+    background: #ffffff;
+    color: black;
 }
 
 .track .icon {
@@ -75,7 +79,7 @@
 
 .track .step.active .text {
     font-weight: 400;
-    color: #000
+    color: white;
 }
 
 .track .text {
@@ -108,17 +112,21 @@
 
 .itemside .info {
     padding-left: 15px;
-    padding-right: 7px
+    padding-right: 7px;
+    font-size: medium;
 }
 .h4-title{
     font-weight: 600;
     padding-bottom: 4px;
     font-size: 1.5rem;
+    color: white;
 }
 .p-value{
-    color: #6c757d!important;
+    color: whitefv;
     display: block;
     margin-bottom: 2.5px;
+    color: white;
+    font-size: 15px;
 }
 
 .itemside .item-title {

@@ -19,6 +19,7 @@
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-size: 1.5rem;
+    color:white;
 }
 .count-cart p strong{
     font-weight: bold;
@@ -26,9 +27,9 @@
 .checkout-note textarea {
     border-radius: 0;
     -webkit-appearance: none;
-    background: #ededed;
+    background: #000000;
     resize: none;
-    color: #080808;
+    color: white;
     font-size: 15px;
     padding: 20px;
     outline: none;
@@ -46,6 +47,7 @@ p.order-infor {
     font-weight: 500;
     margin-bottom: 40px;
    margin-right: 0px;
+   color:white;
 }
 .order-infor .total_price {
     font-size: 30px;
@@ -55,7 +57,7 @@ p.order-infor {
 }
 .button.dark {
     color: #fff;
-background-color: #001f9c;
+background-color: #E89C31;
 transition: 0.5s;
 }
 .button.dark:hover{
@@ -71,7 +73,7 @@ border:1px #001f9c solid;
 }
 .button.drakpay:hover{
     color: #fff;
-background-color: #fff;
+background-color: #E89C31;
 border:1px #fff solid;
 
 
@@ -88,6 +90,8 @@ border:1px #fff solid;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 1px;
+    color:rgb(194, 236, 6);
+    background-color: green;
 }
 table.table-cart tr td.item h3 {
     margin: 0 0 5px;
@@ -103,7 +107,7 @@ table.table-cart tr td.item h3 {
     background: #fff;
     font-weight: 500;
     font-size: 1.4rem;
-    color: #abafb2;
+    color: black;
     height: 25px;
     padding: 0;
     text-align: center;
@@ -156,6 +160,7 @@ table.table-cart tr td.item .price span {
     font-size: 16px;
     padding-right: 0px;
     font-weight: 500;
+    color:white;
     }
     table.table-cart tr td.item .price {
        padding-left: 500px;
@@ -203,9 +208,12 @@ table.table-cart tr td.item .price span {
         padding-left: 250px;
     }
         #empty_cart img{
-        width: 500px;
-        height: 400px;      
+        width: 300px;
+        height: 300px;      
+        left:40%;
+        position: relative;
     }
+    
     .line-item-container .image {
         width:50px;
     }

@@ -86,9 +86,7 @@ const AdminHeader = (props) => {
                             </li>
                         </ul>
                     </div>
-                    <div className="header__item">
-                        <NavLink to="/size" className="header__item--link header__item--size">Bảng size</NavLink>
-                    </div>
+                  
                     <div className="header__item">
                         <NavLink to="/introduce" className="header__item--link header__item--about">Giới thiệu</NavLink>
                     </div> */}

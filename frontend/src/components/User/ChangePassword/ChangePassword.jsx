@@ -133,8 +133,11 @@ const ChangePassword = () => {
                         <button className="confirm" onClick={() => checkNewPassword()}>Xác nhận</button>
                     </div>
                     <div className="lastFooter">
+                        <div class="icon-home">
                         <label className="forHome"><i class="fas fa-home"></i></label>
                         <Link to="/login" className="linkTo">Quay trờ lại trang chủ</Link>
+
+                        </div>
                     </div>
                 </div>
             </div>

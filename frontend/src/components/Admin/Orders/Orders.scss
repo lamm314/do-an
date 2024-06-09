@@ -6,6 +6,7 @@
     color: #fff;
       text-align: center;
       margin-bottom: 40px;
+    
 }
 
 .noname {
@@ -36,10 +37,11 @@
 }
 
 
-.h6-orders{
+.h6-orders-admin{
     margin-bottom: 10px;
     display: inline;
     font-weight: 600;
+    color: white;
 }
 .track {
     position: relative;
@@ -129,15 +131,17 @@
     padding-left: 15px;
     padding-right: 7px
 }
-.h4-title{
+.h4-title-admin{
     font-weight: 600;
     padding-bottom: 4px;
     font-size: 1.5rem;
+    color:black;
 }
-.p-value{
-    color: #6c757d!important;
+.p-value-admin{
+    color: black;
     display: block;
     margin-bottom: 2.5px;
+    font-size:14px;
 }
 
 .itemside .item-title {
@@ -147,9 +151,9 @@
     font-size:1.5rem;
     font-weight: 600;
 }
-.delete-order{
+.delete-order-admin{
     background-color: #fff;
-    color: #fff;
+    color: black;
     float: right;
     padding: 19px 20px;
     text-align: center;
@@ -177,8 +181,8 @@
 .empty-orders{
    text-align: center;
    img{
-       height: 400px;
-       width: 450px;
+       height: 300px;
+       width: 300px;
    }
 }
 .order-sort{

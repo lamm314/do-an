@@ -10,8 +10,12 @@ const UserFooter = () => {
           <div className="col-xl-4">
             <div className="footer__title">Giới thiệu</div>
             <div className="footer__description">
-              KITTY được thành lập vào năm 2021, tất cả sản phẩm của KITTY đều
-              được tham khảo và trưng bày dựa theo tiêu chí học là chính
+            mộng "rữa" rừng <br />
+đến cuối thì thơ văn cũng không cứu được tôi <br />
+con mộng - rữa - rừng tan ra <br />
+tôi chỉ còn sự im lặng chưa biến mất <br />
+con mộng hoài nghi và câm điếc <br />
+nhìn tôi và tiếp tục tan ra
             </div>
             <div className="big-logo"></div>
           </div>
@@ -34,12 +38,10 @@ const UserFooter = () => {
                 Hướng Dẫn
               </Link>
               <p></p>
-              <Link to="/size" className="footer__description">
-                Bảng Size
-              </Link>
+             
               <p></p>
               <Link to="/introduce" className="footer__description">
-                Giới Thiệu KITTY
+                Giới Thiệu
               </Link>
               <p></p>
             </div>
@@ -50,7 +52,7 @@ const UserFooter = () => {
               <i className="fas fa-map-marker-alt"></i>
               <span>
                 {" "}
-                🔥Số 1 Đại Cồ Việt, phường Bách Khoa, quận Hai Bà Trưng, thành
+                Số 1 Đại Cồ Việt, phường Bách Khoa, quận Hai Bà Trưng, thành
                 phố Hà Nội, Thủ đô Hà Nội, Việt Nam
               </span>
               <p></p>
@@ -58,20 +60,22 @@ const UserFooter = () => {
               <span> 0123 456 789</span>
               <p></p>
               <i className="fas fa-envelope"></i>
-              <span> kittycat@gmail.com</span>
+              <span> help@ca-hoa.com</span>
             </div>
           </div>
           <div className="col-xl-3">
             <div className="footer__title">Fanpage</div>
+            
             <div className="footer__description">
+              <p className="name">Con Cá Biết Đi</p>
               <a
-                href="https://www.facebook.com/ictsv.hust"
+                href="https://www.facebook.com/ConCaBietDii"
                 target="blank"
                 className="fanpage"
               >
                 <div className="avatar"></div>
-                <div className="fanpage-name">ICTSV</div>
-                <div className="liked"></div>
+               
+                
               </a>
             </div>
           </div>

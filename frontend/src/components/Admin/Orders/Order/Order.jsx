@@ -39,20 +39,24 @@ const Order = (props) => {
         toast.success('Hủy đơn hàng thành công!');
     }
     return (
+        
         <div className="card card-order">
             <div className="card-body">
+                <div className="admin-black">
                 <div className="card-body row">
-                    <div className="col"> <h6 className="h6-orders">ID đơn hàng: </h6>{props.order.order_id} </div>
-                    <div className="col">   <h6 className="h6-orders">ID khách: </h6>{props.order.user_id}</div>
-                    <div className="col">   <h6 className="h6-orders">Họ và tên: </h6>{props.order.user_name}</div>
+                  
+                    <div className="col" style={{color:"white"}} > <h6 className="h6-orders-admin">ID đơn hàng: </h6>{props.order.order_id} </div>
+                    <div className="col" style={{color:"white"}}>   <h6 className="h6-orders-admin">ID khách: </h6>{props.order.user_id}</div>
+                    <div className="col" style={{color:"white"}} >   <h6 className="h6-orders-admin">Họ và tên: </h6>{props.order.user_name}</div>
+                  
                 </div>
                 <div className="card">
                     <div className="card-body row">
-                        <div className="col"><h4 className="h4-title">Email:</h4> <p className="p-value">{props.order.email}</p> </div>
-                        <div className="col"><h4 className="h4-title">Số điện thoại:</h4><p className="p-value"> {props.order.phone_number}</p> </div>
-                        <div className="col"><h4 className="h4-title">Địa chỉ:</h4><p className="p-value">{props.order.address}</p> </div>
+                        <div className="col" ><h4 className="h4-title-admin">Email:</h4> <p className="p-value-admin">{props.order.email}</p> </div>
+                        <div className="col"><h4 className="h4-title-admin">Số điện thoại:</h4><p className="p-value-admin"> {props.order.phone_number}</p> </div>
+                        <div className="col"><h4 className="h4-title-admin">Địa chỉ:</h4><p className="p-value-admin">{props.order.address}</p> </div>
                         {/* <div className="col"><h4 className="h4-title">Trạng thái:</h4><p className="p-value">Đang lấy hàng</p></div> */}
-                        <div className="col"><h4 className="h4-title">Thành tiền:</h4> <p className="p-value">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(props.order.total)}</p> </div>
+                        <div className="col"><h4 className="h4-title-admin">Thành tiền:</h4> <p className="p-value-admin">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(props.order.total)}</p> </div>
                     </div>
                 </div>
                 <div className="track">
@@ -81,8 +85,9 @@ const Order = (props) => {
                 </ul>
                 <div className="card-body row">
                     <div className="col" ><textarea className="order-note" rows="8" cols="50" value={props.order.note} placeholder="Ghi chú" readOnly></textarea></div>
-                    <div className="col"><button href="#" className="delete-order" onClick={() => setIsOpen(!isOpen)}>  Hủy đơn hàng</button></div>
+                    <div className="col"><button href="#" className="delete-order-admin" onClick={() => setIsOpen(!isOpen)}>  Hủy đơn hàng</button></div>
                 </div>
+            </div>
             </div>
             <Modal isOpen={isOpen} style={{ fontSize: "1.6rem" }} centered toggle={() => setIsOpen(!isOpen)}>
                 <div className="modal-header">

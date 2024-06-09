@@ -1,11 +1,13 @@
 import Item from "./Item/Item";
+import './card.scss';
 
 const Card = (props) => {
     return (
-        <div className="card">
+
+        <div className="card-black">
             <div className="card-body">
                 <h6 className="h6-card">ID đơn hàng: {props.order.order_id}</h6>
-                <div className="card">
+                <div className="card-black">
                     <div className="card-body row">
                         <div className="col"><h4 className="h4-title">Thành tiền:</h4> <p className="p-value">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(props.order.total)}</p> </div>
                         <div className="col"><h4 className="h4-title">Số điện thoại:</h4><p className="p-value"> {props.order.phone_number}</p> </div>
@@ -37,7 +39,6 @@ const Card = (props) => {
                             <div className="step "> <span className="icon"> <i className="fa fa-box"></i> </span> <span className="text">Đã Nhận</span> </div>
                     }
                 </div>
-
                 <ul className="row">
                     {
                         props.order.listProducts.map((product, index) => {

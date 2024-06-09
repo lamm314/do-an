@@ -13,7 +13,7 @@ const Checkout = (props) => {
     const user = userFromRedux.user;
     const axiosJWT = createAxios(userFromRedux, dispatch);
 
-    const sizeText = ["S", "M", "L", "XL"];
+    const sizeText = ["60x80", "120x160", "180x240", "240x480"];
     const [user_name, setUserName] = useState(user.user_name);
     const [email, setEmail] = useState(user.email);
     const [address, setAddress] = useState(user.address);
@@ -241,10 +241,10 @@ const Checkout = (props) => {
                                                         </div>
                                                     </td>
                                                     <td className="product-description">
-                                                        <span className="product-description-name order-summary-emphasis">{item.product_name}</span>
+                                                        <span className="product-description-name order-summary-emphasis" style={{color:"white"}}>{item.product_name}</span>
 
                                                         <span className="product-description-variant order-summary-small-text">
-                                                            <p>{sizeText[item.size]}</p>
+                                                            <p>Size: {sizeText[item.size]}</p>
                                                         </span>
 
                                                     </td>
@@ -328,8 +328,8 @@ const Checkout = (props) => {
                             </thead>
                             <tbody>
                                 <tr className="total-line total-line-subtotal">
-                                    <td className="total-line-name">Tạm tính</td>
-                                    <td className="total-line-price">
+                                    <td className="total-line-name" style={{color:"white"}}>Tạm tính</td>
+                                    <td className="total-line-price" >
                                         <span className="order-summary-emphasis" >
                                             {Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total)}
                                         </span>
@@ -348,8 +348,8 @@ const Checkout = (props) => {
                                         <span className="payment-due-label-total">Tổng cộng</span>
                                     </td>
                                     <td className="total-line-name payment-due">
-                                        <span className="payment-due-currency">VND</span>
-                                        <span className="payment-due-price" >
+                                        <span className="payment-due-currency"style={{color:"white"}}>VND</span>
+                                        <span className="payment-due-price" style={{color:"white"}}>
                                             {Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total + 25000)}
                                         </span>
                                     </td>

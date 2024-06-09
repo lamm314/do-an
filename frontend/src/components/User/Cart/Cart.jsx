@@ -37,7 +37,7 @@ const Cart = (props) => {
                                                         })
                                                         :
 
-                                                        <tr><td id="empty_cart" > <img src="/images/empty-cart.png" /></td></tr>
+                                                        <tr><td id="empty_cart" > <img src="/images/no-item.png" /></td></tr>
                                                     }
                                                 </tbody>
                                             </table>

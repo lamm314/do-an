@@ -27,14 +27,18 @@ const Products = (props) => {
                         {
                             products && products.map((product, index) => {
                                 return (
-                                    props.type === "all" ? <Link to={`/product-details/${product.product_id}`} className="col-xl-3 item">
+                                    props.type === "all" ? 
+                                      <Link to={`/product-details/${product.product_id}`} className="col-xl-3 item">
                                         <div className="product-img" style={{ backgroundImage: `url('/images/${product.product_avatar}')` }}></div>
                                         <div className="product-infor">
                                             <div className="product-name">
                                                 {product.product_name}
                                             </div>
                                             <span className="product-price">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.price - product.price * product.discount / 100)}</span>
-                                            <del className="Pro-real">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(Number(product.price))}</del>
+                                                {
+                                                     product.discount !== 0 &&
+                                                    <del className="Pro-real">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(Number(product.price))}</del>
+                                                 }
                                         </div>
                                     </Link>
                                         :
@@ -57,13 +61,10 @@ const Products = (props) => {
                                                         {product.product_name}
                                                     </div>
                                                     <span className="product-price">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.price - product.price * product.discount / 100)}</span>
+                                                {
+                                                     product.discount !== 0 &&
                                                     <del className="Pro-real">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(Number(product.price))}</del>
-                                                    {/* <span className="product-price">
-                                                        {product.price}
-                                                    </span>
-                                                    <span className="product-price-dong">
-                                                        ₫
-                                                    </span> */}
+                                                 }
                                                 </div>
                                             </Link>
 

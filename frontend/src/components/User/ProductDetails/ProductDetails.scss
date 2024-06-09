@@ -3,7 +3,7 @@
 
 .title2 {
     max-width: 100%;
-    color: black;
+    color: white;
     font-size: 1.5rem;
     font-weight: bold !important;
 }
@@ -33,6 +33,7 @@
         word-spacing: 1px;
         margin: 0 0 10px 0;
         font-size: 14px;
+        color:white;
     }
 }
 
@@ -131,7 +132,7 @@
                 font-family: "FontAwesome";
                 font-size: 33px;
                 display: inline-block;
-                color: #000;
+                color: white;
             }
 
             .click-next:before {
@@ -139,7 +140,7 @@
                 font-family: "FontAwesome";
                 font-size: 33px;
                 display: inline-block;
-                color: #000;
+                color: white;
             }
         }
     }
@@ -162,7 +163,7 @@
             font-weight: 700;
             margin: 0 0 5px;
             line-height: initial;
-            color: black;
+            color: white;
         }
 
         .IDproduct {
@@ -177,6 +178,7 @@
         align-items: center;
         padding: 10px 0;
         width: 100%;
+        
 
         .Pro-sale {
             display: inline-block;
@@ -186,14 +188,14 @@
             text-transform: uppercase;
             font-weight: 600;
             font-size: 12px;
-            color: #f94c43;
+            color: black;
         }
 
         .Pro-price {
             font-size: 18px;
             opacity: .92;
             font-weight: bold;
-            color: red;
+            color: white;
         }
 
         .Pro-real {
@@ -213,7 +215,7 @@
         .Size {
             font-size: 20px;
             font-weight: bold;
-            color: black;
+            color: white;
             display: inline-block
         }
 
@@ -227,16 +229,16 @@
                 position: relative;
                 cursor: pointer;
                 margin: 0;
-                color: #000;
-                height: 25px;
-                width: 49px;
+                color: white;
+                height: 27px;
+                width: 75px;
                 font-size: 13px;
                 font-weight: 600;
                 line-height: 30px;
                 white-space: nowrap;
-                text-transform: uppercase;
                 display: inline-block;
                 max-width: 100%;
+                
 
                 .button-check {
                     font-size: 21px !important;
@@ -319,7 +321,7 @@
                 line-height: 22px;
                 width: 100%;
                 height: 49px;
-                color: #fff;
+                color: black;
                 border-color: #fff;
                 background-color: #fff;
                 border: 1px solid;
@@ -328,7 +330,7 @@
             }
 
             .button-add:hover {
-                background-color: #ffffff;
+                background-color: #E89C31;
                 color: black;
             }
         }

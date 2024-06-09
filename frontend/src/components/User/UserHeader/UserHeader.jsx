@@ -42,9 +42,13 @@ const UserHeader = (props) => {
             <div className="container header-container">
                 <NavLink to="/" className="header__logo">
                 </NavLink>
+                
                 <div className="header__item-container">
                     <div className="header__item">
                         <NavLink to="/" className="header__item--link header__item--home">Trang chủ</NavLink>
+                    </div>
+                    <div className="header__item">
+                        <NavLink to="/shop" className="header__item--link header__item--home">Cửa hàng</NavLink>
                     </div>
                     <div className="header__item">
                         <NavLink to="/products/all" className="header__item--link header__item--product">
@@ -53,23 +57,21 @@ const UserHeader = (props) => {
                         </NavLink>
                         <ul className="header__item-list">
                             <li className="header__item-list--item">
-                                <NavLink to="/products/tee">Tee</NavLink>
+                                <NavLink to="/products/tranh-lua">Tranh lụa</NavLink>
                             </li>
                             <li className="header__item-list--item">
-                                <NavLink to="/products/jacket">Jacket</NavLink>
+                                <NavLink to="/products/tranh-son-dau">Tranh Sơn Dầu</NavLink>
                             </li>
                             <li className="header__item-list--item">
-                                <NavLink to="/products/accessories">ACCESSORIES</NavLink>
+                                <NavLink to="/products/tranh-thuy-mac">Tranh Thủy Mặc</NavLink>
                             </li>
                             <li className="header__item-list--item">
-                                <NavLink to="/products/pants">Pants</NavLink>
+                                <NavLink to="/products/tranh-phun-son">Tranh Phun Sơn</NavLink>
                             </li>
                             <li className="header__item-list--item">
-                                <NavLink to="/products/hoodie">Hoodie</NavLink>
+                                <NavLink to="/products/tranh-dau">Tranh Dầu</NavLink>
                             </li>
-                            <li className="header__item-list--item">
-                                <NavLink to="/products/sweater">Sweater</NavLink>
-                            </li>
+                            
                         </ul>
                     </div>
                     <div className="header__item">
@@ -118,9 +120,7 @@ const UserHeader = (props) => {
                             </li>
                         </ul>
                     </div>
-                    <div className="header__item">
-                        <NavLink to="/size" className="header__item--link header__item--size">Bảng size</NavLink>
-                    </div>
+                   
                     <div className="header__item">
                         <NavLink to="/introduce" className="header__item--link header__item--about">Giới thiệu</NavLink>
                     </div>

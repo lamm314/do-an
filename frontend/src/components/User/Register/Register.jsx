@@ -139,11 +139,27 @@ const Register = () => {
         <div className="container">
 
             <div className="content-page">
-                <div className="wrapbox-heading-account">
-                    <div className="header-page clearfix">
-                        <h1 className="h1_register">Tạo tài khoản</h1>
-                    </div>
-                </div>
+            <div className="login-container">
+            <div className="image-gallery">
+             <div className="img1"></div>
+             <div className="img2"></div>
+             <div className="img3"></div>
+             <div className="img4"></div>
+             <div className="img5"></div>
+             <div className="img6"></div>
+            </div>
+        </div>
+                <div className="title">
+              <div className="n">k</div>
+              <div className="h">ý</div>
+              <div className="dd">đ</div>
+              <div className="aw">ă</div>
+              <div className="n2">n</div>
+              <div className="g">g</div>
+            </div>
+        <br/>
+        <br/>
+           
                 <div className="wrapbox-content-account">
                     <div id="customer-login">
                         <div id="login" className="userbox">
@@ -152,6 +168,7 @@ const Register = () => {
                                 <input name="utf8" type="hidden" value="✓" />
                                 <div className="clearfix large_form">
                                     <label htmlFor="user_name" className="label icon-field"><i className="icon-login icon-user "></i></label>
+                                    <div className="ho-ten">Họ và tên</div>
                                     <input id="user_name" required type="text" value={user_name} name="user_name" placeholder="Họ và tên" className="text" size="30"
                                         onChange={(e) => handleUserName(e)}
                                     />
@@ -159,15 +176,18 @@ const Register = () => {
                                 </div>
 
                                 <div id="gender" className="clearfix large_form">
+                                    <div className='gioi-tinh'>Giới tính</div>
                                     <input id="radio1" type="radio" value="Nữ" name="gender" onClick={() => handleGender("Nữ")} />
                                     <label htmlFor="radio1">Nữ</label>
                                     <input id="radio2" type="radio" value="Nam" name="gender" onClick={() => handleGender("Nam")} />
                                     <label htmlFor="radio2">Nam</label>
                                     <div className='err-message large-margin'>{genderError}</div>
+                                    
                                 </div>
 
 
                                 <div id="birthday" className="clearfix large_form">
+                                    <div className='ngay-sinh'>Ngày sinh</div>
                                     <label htmlFor="birthday" className="label icon-field"><i className="icon-login icon-envelope "></i></label>
                                     <input
                                         required
@@ -178,11 +198,13 @@ const Register = () => {
                                         id="birthday"
                                         className="text"
                                         size="30"
+                                      
                                         onChange={(e) => handleBirthday(e)}
                                     />
                                     <div className='err-message'>{birthdayError}</div>
                                 </div>
                                 <div id="email" className="clearfix large_form">
+                                    <div className='email'>Email</div>
                                     <label htmlFor="email" className="label icon-field"><i className="icon-login icon-envelope "></i></label>
                                     <input
                                         required
@@ -200,6 +222,7 @@ const Register = () => {
 
                                 </div>
                                 <div id="password" className="clearfix large_form">
+                                    <div className='mk'>Mật khẩu</div>
                                     <label htmlFor="password" className="label icon-field"><i className="icon-login icon-shield "></i></label>
                                     <input
                                         required
@@ -220,7 +243,7 @@ const Register = () => {
 
                                 <div className="clearfix action_account_custommer">
                                     <div className="action_bottom button dark" id="register">
-                                        <input className="btn" type="submit" value="Đăng ký" onClick={(e) => handleRegister(e)} />
+                                        <input className="btn2" type="submit" value="Đăng ký" onClick={(e) => handleRegister(e)} />
                                     </div>
                                 </div>
                                 <div className="clearfix req_pass">

@@ -35,9 +35,10 @@
     background-color: transparent;
     font-size: 1.3em;
     font-weight: 500;
+    color:white;
 }
 #blue_link{
-    color: #106999;
+    color: #249cdd;
     display: inline-block;
 }
 .breadcrumb .breadcrumb-item:after {
@@ -56,11 +57,12 @@
     display: none;
 }
 .section_header{
-
+    color:white;
     font-size:1.8rem;
     font-weight: 500;
 }
 .section_header_2{
+    color:white;
     font-size:1.8rem;
     font-weight: 500;
     padding-top: 20px;
@@ -71,6 +73,7 @@
     font-weight: 500;
     padding-top: 30px;
     padding-bottom: 20px;
+    color:white;
 }
 .have_account{
     font-size:1.5rem;
@@ -165,6 +168,7 @@ background-color: #eee;
     padding: 1.5em;
     text-align: center;
     font-weight: 600;
+    color:white;
 }
 .step-footer {
     display: flex;
@@ -192,7 +196,7 @@ background-color: #eee;
     box-sizing: border-box;
     text-align: center;
     position: relative;
-    background: #338dbc;
+    background: #E89C31;
     color: white;
     flex: 0 0 auto;
 }
@@ -222,7 +226,7 @@ background-color: #eee;
     box-sizing: border-box;
     text-align: center;
     color: white;
-    background: #338dbc;
+    background: #E89C31;
     font-size: 1.4rem;
 }
 
@@ -243,16 +247,19 @@ border-collapse: collapse;
 .total-line-table td:first-child,.total-line-table th:first-child {
     padding-left: 0;
     text-align: left;
+    color:white;
 }
 .total-line-table td:last-child,.total-line-table th:last-child {
     text-align: right;
 }
 .total-line-price{
     font-weight: 600;
+    color:white;
 }
 .total-line-table-footer .total-line td {
     padding-top: 3em;
     position: relative;
+    
 }
 .payment-due .payment-due-currency {
     font-size: 0.85714em;
@@ -261,6 +268,7 @@ border-collapse: collapse;
     color: #969696;
 }
 .payment-due .payment-due-price {
+    
     font-size: 1.8em;
     font-weight: 500;
     letter-spacing: -0.04em;
@@ -269,7 +277,7 @@ border-collapse: collapse;
 }
 .payment-due-label .payment-due-label-total {
     font-size: 1.2em;
-    color: #4b4b4b;
+    color: white;
 }
 .total-line-table td{
     border: none;

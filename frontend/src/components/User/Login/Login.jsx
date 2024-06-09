@@ -40,136 +40,24 @@ const Login = () => {
              <div className="login-container">
             <div className="image-gallery">
              <div className="img1"></div>
-               
+             <div className="img2"></div>
+             <div className="img3"></div>
+             <div className="img4"></div>
+             <div className="img5"></div>
+             <div className="img6"></div>
             </div>
         </div>
 
-               <div
-      style={{
-        position: "absolute",
-        top: "123px",
-        left: "92px",
-        width: "397px",
-        height: "268px",
-        textAlign: "left",
-        fontSize: "96px",
-        color: "red",
-        fontFamily: "Inter",
-      }}
-    >
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "10.71%",
-          top: "45.52%",
-          left: "0%",
-          fontWeight: "800",
-          color: "#cd5b5b",
-          display: "inline-block",
-        }}
-      >
-        n
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "11.23%",
-          top: "45.52%",
-          left: "29.9%",
-          fontWeight: "800",
-          display: "inline-block",
-          color:"#E89C31",
-        }}
-      >
-        h
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "10.15%",
-          top: "45.52%",
-          left: "60.58%",
-          fontWeight: "800",
-          display: "inline-block",
-          color:"#E89C31",
-        }}
-      >
-        ậ
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "10.71%",
-          top: "45.52%",
-          left: "90.2%",
-          fontWeight: "800",
-          color: "#cd5b5b",
-          display: "inline-block",
-        }}
-      >
-        p
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "49.25%",
-          width: "21.84%",
-          top: "0%",
-          left: "0%",
-          fontWeight: "800",
-          color: "#cd5c5c",
-          display: "inline-block",
-        }}
-      >
-        đ
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "10.71%",
-          top: "0%",
-          left: "29.95%",
-          fontWeight: "800",
-          display: "inline-block",
-          color: "#E89C31",
-        }}
-      >
-        ă
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "11.23%",
-          top: "0%",
-          left: "59.9%",
-          fontWeight: "800",
-          display: "inline-block",
-          color: "#E89C31",
-        }}
-      >
-        n
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          height: "39.66%",
-          width: "11.23%",
-          top: "0%",
-          left: "88.77%",
-          fontWeight: "800",
-          color: "#cd5b5b",
-          display: "inline-block",
-        }}
-      >
-        g
-      </div>
-    </div>
+            <div className="title">
+              <div className="n">n</div>
+              <div className="h">h</div>
+              <div className="aa">ậ</div>
+              <div className="p">p</div>
+              <div className="dd">đ</div>
+              <div className="aw">ă</div>
+              <div className="n2">n</div>
+              <div className="g">g</div>
+            </div>
   
 
               
@@ -186,11 +74,13 @@ const Login = () => {
                                 <input name="form_type" type="hidden" value="customer_login" />
                                 <input name="utf8" type="hidden" value="✓" />
                                 <div className="clearfix large_form" >
+                                    <div className="email"> Email</div>
                                     <label htmlFor="customer_email" className="icon-field"><i className="icon-login icon-envelope "></i> </label>
-                                    <input required="" type="email" value={email} name="email" id="customer_email" placeholder="Email" className="text" onChange={(e) => handleType(e, setEmail)} />
+                                    <input required="" type="email" value={email} name="email" id="customer_email" placeholder="Nhập email đã đăng ký" className="text" onChange={(e) => handleType(e, setEmail)} />
                                 </div>
                                 <div className="clearfix large_form" >
-                                    <label htmlFor="customer_password" className="icon-field"><i className="icon-login icon-shield"></i></label>
+                                    <label htmlFor="customer_password" className="icon-field" ><i className="icon-login icon-shield" ></i></label>
+                                    <div className="mk"> Mật khẩu </div>
                                     <input required="" type="password" value={password} name="password" id="customer_password" placeholder="Mật khẩu" className="text" size="16" onChange={(e) => handleType(e, setPassword)} />
                                     {err && <p className='err-message'>{err}</p>}
                                     <div className="clearfix action_account_custommer">
@@ -199,7 +89,7 @@ const Login = () => {
                                         </div>
                                         <div className="req_pass">
                                             {/* <a href="#">Quên mật khẩu?</a><br></br> */}
-                                            hoặc <Link to="/register">Đăng ký</Link>
+                                            hoặc <Link className="signup" to="/register">Đăng ký</Link>
                                         </div>
                                     </div>
                                 </div>

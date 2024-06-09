@@ -37,7 +37,7 @@ const OrdersHistory = () => {
                 }
                 {
                     (!OrdersHistory || OrdersHistory?.length === 0) &&
-                    <div className="empty-orders"><img src="https://cdn.dribbble.com/users/429792/screenshots/3649946/no_order.png" /></div>
+                    <div className="empty-orders"><img src="/images/download.png"/></div>
 
                 }
             </div>

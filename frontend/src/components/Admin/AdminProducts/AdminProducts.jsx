@@ -12,11 +12,11 @@ const AdminProducts = () => {
     const products = useSelector((state) => state.product.products.allProducts);
     // const [product_id, setProductId] = useState(products.length !== 0 ? products[products.length - 1].product_id + 1 : 1);
     const [product_name, setProductName] = useState("");
-    const [product_type, setProductType] = useState("tee");
+    const [product_type, setProductType] = useState("tranh-lua");
     const [product_avatar, setProductAvatar] = useState("");
     const [new_product, setNewProduct] = useState(1);
-    const [quantity, setQuantity] = useState([500, 500, 500, 500]);
-    const [price, setPrice] = useState(300000);
+    const [quantity, setQuantity] = useState([1, 1, 1, 1]);
+    const [price, setPrice] = useState();
     const [discount, setDiscount] = useState(0);
     const [bought_count, setBoughtCount] = useState(0);
     const [addProduct, setAddProduct] = useState(false);

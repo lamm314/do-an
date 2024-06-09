@@ -17,7 +17,7 @@ const Product = (props) => {
     const [product_avatar, setProductAvatar] = useState(props.product.product_avatar);
     const [new_product, setNewProduct] = useState(props.product.new_product);
     const [size, setSize] = useState(0);
-    const sizeText = ["S", "M", "L", "XL"];
+    const sizeText = ["60x80", "120x160", "180x240", "240x480"];
     const [quantity, setQuantity] = useState(props.product.quantity);
     const [price, setPrice] = useState(props.product.price);
     const [discount, setDiscount] = useState(props.product.discount);
@@ -99,7 +99,6 @@ const Product = (props) => {
                 await createProduct(newProduct, dispatch, user.token, axiosJWT);
                 setAvatarError("");
                 setNameProductError("");
-                setMultipleImageError("");
                 props.setAddProduct(false);
                 toast.success('Thêm sản phẩm thành công!');
             }
@@ -253,12 +252,11 @@ const Product = (props) => {
                 {
                     props.add || edit ?
                         <select className='products-table-select' value={product_type} onChange={(e) => setProductType(e.target.value)}>
-                            <option value="tee">tee</option>
-                            <option value="jacket">jacket</option>
-                            <option value="accessory">accessory</option>
-                            <option value="Pants">Pants</option>
-                            <option value="hoodie">hoodie</option>
-                            <option value="sweater">sweater</option>
+                            <option value="tranh-lua">Tranh lụa</option>
+                            <option value="tranh-son-dau">Tranh sơn dầu</option>
+                            <option value="tranh-thuy-mac">Tranh thủy mặc</option>
+                            <option value="tranh-phun-son">Tranh phun sơn</option>
+                            <option value="tranh-dau">Tranh dầu</option>
                         </select>
                         :
                         props.product.product_type
@@ -277,10 +275,10 @@ const Product = (props) => {
                         sizeText[size]
                 } */}
                 <select className='products-table-select' value={size} onChange={(e) => handleSetSize(e)}>
-                    <option value="0">S</option>
-                    <option value="1">M</option>
-                    <option value="2">L</option>
-                    <option value="3">XL</option>
+                    <option value="0">60x80</option>
+                    <option value="1">120x160</option>
+                    <option value="2">180x240</option>
+                    <option value="3">240x480</option>
                 </select>
             </div></td>
             <td>

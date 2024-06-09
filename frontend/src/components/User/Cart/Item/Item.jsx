@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { createAxios } from "../../../../createInstance";
 import { decrementItem, deleteItemInCart, getCart, incrementItem } from "../../../../redux/apiRequest";
 const Item = (props) => {
-    const sizeText = ["S", "M", "L", "XL"];
+    const sizeText = ["60x80", "120x160", "180x240", "240x480"];
     const user = useSelector((state) => state.auth.login.currentUser);
     const dispatch = useDispatch();
     const axiosJWT = createAxios(user, dispatch);
@@ -41,11 +41,11 @@ const Item = (props) => {
                 <Link to={`/product-details/${props.item.product_id}`}>
                     <h3>{props.item.product_name}</h3>
                 </Link>
-                <p>
+                <p style={{color:"white"}}>
                     <span>{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(props.item.price - props.item.price * props.item.discount / 100)}</span>
                 </p>
                 <p className="variant">
-                    <span className="variant_title">{sizeText[props.item.size]}</span>
+                    <span className="variant_title" style={{color:"white"}}>Size: {sizeText[props.item.size]}</span>
                 </p>
                 <div className="qty quantity-partent qty-click clearfix">
                     <button type="button" className="qtyminus qty-btn" onClick={() => handleDecrement()}>-</button>

@@ -4,11 +4,11 @@ const BuyingGuide = () => {
     <div className="container">
       <div className="row">
         <div className="content-page tutorial-content">
-          <h1 className="h1-title">Hướng dẫn mua hàng tại Web KITTY</h1>
+          <h1 className="h1-title">Hướng dẫn mua hàng tại Web Cá Họa</h1>
           <p>
-            <strong>1. Hướng dẫn sử dụng website KITTY:</strong>
+            <strong>1. Hướng dẫn sử dụng website Cá Họa:</strong>
           </p>
-          <p>- Các bước mua hàng tại&nbsp;Web KITTY:</p>
+          <p>- Các bước mua hàng tại&nbsp;Web CÁ Họa:</p>
           <p>
             + Chọn sản phẩm -&gt; chọn Size sản phẩm -&gt; thêm vào giỏ hàng
             -&gt; thanh toán
@@ -25,14 +25,14 @@ const BuyingGuide = () => {
           <p>
             (&nbsp;Đơn hàng thành công là khi các bạn&nbsp;điền&nbsp;đầy&nbsp;đủ
             thông tin và chính xác, các bạn cần&nbsp;điền&nbsp;đầy&nbsp;đủ thông
-            tin và Mail&nbsp;để TSUN có thể xác nhận&nbsp;đơn hàng qua Mail cho
+            tin và Mail&nbsp;để Shop có thể xác nhận&nbsp;đơn hàng qua Mail cho
             các bạn.)
           </p>
           <p>
-            <strong>2. Hình thức mua hàng tại KITTY:</strong>
+            <strong>2. Hình thức mua hàng tại Cá Họa:</strong>
           </p>
           <p>
-            - Các bạn có thể mua hàng tại&nbsp;Web KITTY bằng các hình thức
+            - Các bạn có thể mua hàng tại&nbsp;Web Cá Họa bằng các hình thức
             thanh toán sau&nbsp;đây:
           </p>
           <p>
@@ -46,8 +46,8 @@ const BuyingGuide = () => {
             <strong>
               <u>Cách 2</u>
             </strong>
-            : Thanh toán chuyển khoảng trước cho KITTY&nbsp;(Trước khi CHUYỂN
-            KHOẢN các bạn vui lòng nhắn tin trước cho ICTSV qua Ins hoặc FB để
+            : Thanh toán chuyển khoảng trước cho Cá Họa&nbsp;(Trước khi CHUYỂN
+            KHOẢN các bạn vui lòng nhắn tin trước cho Cá Họa qua fanpage Facebook để
             chúng tôi kiểm tra và xác nhận đơn hàng.)
           </p>
         </div>

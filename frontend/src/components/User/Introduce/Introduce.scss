@@ -5,13 +5,14 @@
     margin-top: calc(#{$header-height} + 80px);
     margin-bottom: 8px;
     .title{
-        color: $primary-color; 
+        color: white; 
         text-align: left;
         font-size: 3rem;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         font-weight: 700;
     }
     .description{
-        margin-bottom: 20px;
+       padding-top: 20%;
+        color: white;
     }
 }

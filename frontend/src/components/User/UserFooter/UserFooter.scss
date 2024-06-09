@@ -17,6 +17,10 @@
     color: #979597;
     font-size: 1.4rem;
     line-height: 2.8rem;
+    .name{
+      color: white;
+      font-size: 20px;
+    }
 }
 
 .footer__description .fanpage {
@@ -25,7 +29,7 @@
     width: 270px;
     display: block;
     background-repeat: no-repeat;
-    background-image: url("../../../../public/images/bk.jpg");
+    background-image: url("../../../../public/images/407353694_325375797018324_806353794585540679_n.jpg");
     position: relative;
 }
 
@@ -34,20 +38,11 @@
     height: 150px;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url("../../../../public/images/footer-logo.png");
+    background-image: url("../../../../public/images/header-logo.png");
+    background-color: white;
 }
 
-.fanpage .avatar {
-    width: 50px;
-    padding-top: 44px;
-    border: 3px solid $white-color;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background-image: url("../../../../public/images/ictsv.jpg");
-}
+
 
 .fanpage-name {
     color: $white-color;
@@ -58,13 +53,5 @@
     left: 68px;
 }
 
-.liked {
-    width: 64px;
-    height: 18px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 98px;
-    left: 12px;
-    background-image: url("../../../../public/images/liked.png");
-}
+
+
