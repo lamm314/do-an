@@ -114,11 +114,7 @@
 
 
 
-.image-gallery img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover; /* Đảm bảo ảnh không bị méo khi thay đổi kích thước */
-}
+
 
 .image-gallery .img1 {
     width: 300px;
@@ -128,7 +124,18 @@
     background-size: contain;
     position: absolute;
     top: 12px;
-    left: -450px;
+    left: -380px;
+    background-image: url("../../../../public/images/1b12ae5838b830d79b48bf05c4c651e6.jpg");
+}
+.image-gallery .img7 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 1520px;
     background-image: url("../../../../public/images/1b12ae5838b830d79b48bf05c4c651e6.jpg");
 }
 
@@ -143,6 +150,18 @@
     left: -120px;
     background-image: url("../../../../public/images/img2.png");
 }
+.image-gallery .img8 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 1800px;
+    background-image: url("../../../../public/images/img2.png");
+}
+
 .image-gallery .img3 {
     width: 300px;
     height: 300px;
@@ -152,6 +171,17 @@
     position: absolute;
     top: 12px;
     left: 210px;
+    background-image: url("../../../../public/images/img3.png");
+}
+.image-gallery .img9 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 2110px;
     background-image: url("../../../../public/images/img3.png");
 }
 
@@ -166,6 +196,17 @@
     left: 540px;
     background-image: url("../../../../public/images/img4.png");
 }
+.image-gallery .img10 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 2340px;
+    background-image: url("../../../../public/images/img4.png");
+}
 .image-gallery .img5 {
     width: 300px;
     height: 300px;
@@ -177,6 +218,17 @@
     left: 870px;
     background-image: url("../../../../public/images/img5.png");
 }
+.image-gallery .img11 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 2670px;
+    background-image: url("../../../../public/images/img5.png");
+}
 .image-gallery .img6 {
     width: 300px;
     height: 300px;
@@ -186,6 +238,17 @@
     position: absolute;
     top: 12px;
     left: 1200px;
+    background-image: url("../../../../public/images/img6.png");
+}
+.image-gallery .img12 {
+    width: 300px;
+    height: 300px;
+    padding-top: 44px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 12px;
+    left: 3000px;
     background-image: url("../../../../public/images/img6.png");
 }
 
@@ -300,3 +363,32 @@
     color: #c42424;
 }
 
+.image-gallery {
+    display: flex;
+    width: 3600px; // Thay đổi theo số lượng và kích thước của ảnh
+    animation: slideRightInfinite 30s linear infinite;
+    white-space: nowrap;
+margin-top: 18%;  
+margin-bottom: -10%;
+}
+  
+  .image-gallery .img {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin: 0; // Đảm bảo không có margin
+    padding: 0; // Đảm bảo không có padding
+    border: none; // Đảm bảo không có border
+    
+  }
+  @keyframes slideRightInfinite {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); // Chỉ di chuyển một nửa độ dài tổng thể để chu kỳ bắt đầu lại
+    }
+  }
+  

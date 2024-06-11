@@ -810,6 +810,7 @@ input:focus {
 .u355u95cua-hang .component-8-l3EI9M::-webkit-scrollbar {
     display: none;
     width  : 0;
+
 }
 
 .u355u95cua-hang .component-8-l3EI9M {
@@ -821,6 +822,7 @@ input:focus {
     position        : absolute;
     top             : 1073px;
     width           : 1510px;
+    z-index: 0;
 }
 
 .u355u95cua-hang .group-87-kdyFEV {
@@ -844,6 +846,7 @@ input:focus {
     position        : absolute;
     top             : 8px;
     width           : 283px;
+    z-index: 0;
 }
 
 .u355u95cua-hang .rectangle-114-VSlfxm {
