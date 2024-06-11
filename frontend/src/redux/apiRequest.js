@@ -245,6 +245,8 @@ const createOrder = async (newOrder, dispatch, token, axiosJWT) => {
         })
         //console.log("res: ", res);
         dispatch(createOrderSuccess());
+
+        return res;
     } catch (err) {
         dispatch(createOrderFailed());
     }

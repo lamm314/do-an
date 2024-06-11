@@ -5,6 +5,8 @@ import { toast } from 'react-toastify';
 import { createAxios } from '../../../createInstance';
 import { createOrder, getCart } from '../../../redux/apiRequest';
 import './Checkout.scss';
+import { COD_PAYMENT_METHOD, VNPAY_PAYMENT_METHOD } from '../../../constants';
+
 const Checkout = (props) => {
     const cart = useSelector((state) => state.auth.cart.cart);
     const dispatch = useDispatch();
@@ -24,6 +26,7 @@ const Checkout = (props) => {
     const [addressError, setAddressError] = useState('');
     const [phone_numberError, setPhone_numberError] = useState('');
 
+    const [payment_method, setPaymentMethod] = useState(COD_PAYMENT_METHOD)
 
     const handleUserName = (e) => {
         const user_name = e.target.value;
@@ -90,6 +93,11 @@ const Checkout = (props) => {
         }
     }
 
+    const handlePayment = (e) => {
+        const payment_method = e.target.value;
+        setPaymentMethod(payment_method);
+    }
+
     const handleOderComplete = async (e) => {
         e.preventDefault();
         const newOrder = {
@@ -97,7 +105,8 @@ const Checkout = (props) => {
             email,
             address,
             phone_number,
-            note: props.note
+            note: props.note,
+            payment_method: payment_method,
         }
         //console.log("newOrder: ", newOrder);
         // const res = await axiosJWT.post("/api/orders/create", newOrder, {
@@ -125,6 +134,11 @@ const Checkout = (props) => {
             setAddressError('');
             setPhone_numberError('');
             toast.success('Đặt hàng thành công!');
+
+            if (res.data?.vnpayUrl) {
+                window.location.href = res.data.vnpayUrl;
+            }
+
             navigate("/");
 
         }
@@ -183,7 +197,7 @@ const Checkout = (props) => {
                         <div className="radio-wrapper COD">
                             <label className="radio-label">
                                 <div className="radio-input">
-                                    <input id="shipping_rate" className="input-radio" type="radio" defaultChecked />
+                                    <input id="shipping_rate" name="payment_method" className="input-radio" type="radio" value={COD_PAYMENT_METHOD} defaultChecked onChange={(e) => handlePayment(e)} />
                                 </div>
                                 <div className="radio-content-input">
                                     <img className="shipping-img" src="https://hstatic.net/0/0/global/design/seller/image/payment/cod.svg?v=1" />
@@ -199,6 +213,20 @@ const Checkout = (props) => {
                             <div className="blank-slate">
                                 Khi Shipper đến nhận hàng , vui lòng trả tiền trực tiếp cho Shipper !
                             </div>
+                        </div>
+                        <br />
+                        <div className="radio-wrapper">
+                            <label className="radio-label">
+                                <div className="radio-input">
+                                    <input id="shipping_rate" name="payment_method" className="input-radio" type="radio" value={VNPAY_PAYMENT_METHOD} onChange={(e) => handlePayment(e)} />
+                                </div>
+                                <div className="radio-content-input">
+                                    <img className="shipping-img" src={'/images/vnpay_logo.png'} width={40} />
+                                    <div>
+                                        <span className="radio-label-primary" id="pay">Thanh toán VNPAY</span>
+                                    </div>
+                                </div>
+                            </label>
                         </div>
                         <div className="step-footer">
                             <Link className="step-footer-previous-link" id="blue_link" to="/cart">
@@ -241,7 +269,7 @@ const Checkout = (props) => {
                                                         </div>
                                                     </td>
                                                     <td className="product-description">
-                                                        <span className="product-description-name order-summary-emphasis" style={{color:"white"}}>{item.product_name}</span>
+                                                        <span className="product-description-name order-summary-emphasis" style={{ color: "white" }}>{item.product_name}</span>
 
                                                         <span className="product-description-variant order-summary-small-text">
                                                             <p>Size: {sizeText[item.size]}</p>
@@ -328,7 +356,7 @@ const Checkout = (props) => {
                             </thead>
                             <tbody>
                                 <tr className="total-line total-line-subtotal">
-                                    <td className="total-line-name" style={{color:"white"}}>Tạm tính</td>
+                                    <td className="total-line-name" style={{ color: "white" }}>Tạm tính</td>
                                     <td className="total-line-price" >
                                         <span className="order-summary-emphasis" >
                                             {Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total)}
@@ -348,8 +376,8 @@ const Checkout = (props) => {
                                         <span className="payment-due-label-total">Tổng cộng</span>
                                     </td>
                                     <td className="total-line-name payment-due">
-                                        <span className="payment-due-currency"style={{color:"white"}}>VND</span>
-                                        <span className="payment-due-price" style={{color:"white"}}>
+                                        <span className="payment-due-currency" style={{ color: "white" }}>VND</span>
+                                        <span className="payment-due-price" style={{ color: "white" }}>
                                             {Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(total + 25000)}
                                         </span>
                                     </td>

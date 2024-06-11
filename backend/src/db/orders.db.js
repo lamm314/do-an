@@ -2,7 +2,7 @@ const { query } = require('../config/connectDB');
 const { array } = require('../middleware/uploadProduct.middleware');
 const { getCartDb } = require('./cart.db');
 
-const createOrdersDb = async ({ cart_id, user_id, user_name, email, address, phone_number, note }) => {
+const createOrdersDb = async ({ cart_id, user_id, user_name, email, address, phone_number, note, payment_method }) => {
   const userCart = await getCartDb({ user_id });
   let total = 0;
   // console.log(userCart);
@@ -16,9 +16,9 @@ const createOrdersDb = async ({ cart_id, user_id, user_name, email, address, pho
     }
     total += 25000.00;
     await query(`
-      insert into orders(user_id,user_name,email,address,phone_number, note, total)
-      values(?,?,?,?,?,?,?)
-      `, [user_id, user_name, email, address, phone_number, note, total]);
+      insert into orders(user_id,user_name,email,address,phone_number, note, payment_method, total)
+      values(?,?,?,?,?,?,?,?)
+      `, [user_id, user_name, email, address, phone_number, note, payment_method, total]);
 
     const order_id_list = await query(`
         select order_id
@@ -159,11 +159,31 @@ const cancelAnOrderDb = async ({ order_id }) => {
   return true;
 }
 
+const getOrderById = async (orderId) => {
+  const rows = await query(`
+    select *
+    from orders
+    where orders.order_id = ?
+  `, [orderId]);
+
+  return rows[0];
+}
+
+const updateOrderPaid = async (orderId, paid) => {
+  await query(`
+    update orders
+    set paid = ?
+    where orders.order_id = ?
+  `, [paid, orderId]);
+}
+
 module.exports = {
   createOrdersDb,
   getAllOrderDb,
   getAllOrdersByUserIdDb,
   getAllProductsOrdersDb,
   orderStatusUpdateDb,
-  cancelAnOrderDb
+  cancelAnOrderDb,
+  getOrderById,
+  updateOrderPaid,
 }

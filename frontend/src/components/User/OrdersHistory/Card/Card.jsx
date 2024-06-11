@@ -1,5 +1,6 @@
 import Item from "./Item/Item";
 import './card.scss';
+import { VNPAY_PAYMENT_METHOD } from '../../../../constants';
 
 const Card = (props) => {
     return (
@@ -12,6 +13,7 @@ const Card = (props) => {
                         <div className="col"><h4 className="h4-title">Thành tiền:</h4> <p className="p-value">{Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(props.order.total)}</p> </div>
                         <div className="col"><h4 className="h4-title">Số điện thoại:</h4><p className="p-value"> {props.order.phone_number}</p> </div>
                         <div className="col"><h4 className="h4-title">Địa chỉ:</h4><p className="p-value">{props.order.address}</p> </div>
+                        <div className="col"><h4 className="h4-title">Phương thức thanh toán:</h4><p className="p-value">{props.order.payment_method.toUpperCase()}</p></div>
                         {
                             props.order.send && props.order.success ?
                                 <div className="col"><h4 className="h4-title">Trạng thái:</h4><p className="p-value">Thành công</p></div>
@@ -26,6 +28,13 @@ const Card = (props) => {
                 <div className="track">
                     <div className="step active"> <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Xác nhận đơn hàng</span> </div>
                     {/* <div className="step active"> <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text">Lấy hàng</span> </div> */}
+                    {
+                        (props.order.payment_method === VNPAY_PAYMENT_METHOD && props.order.paid === 1)
+                        ? <div className="step active"> <span className="icon"> <i className="fa fa-usd"></i> </span> <span className="text">Đã thanh toán VNPAY</span> </div>
+                        : (props.order.payment_method === VNPAY_PAYMENT_METHOD && props.order.paid === 0)
+                            ? <div className="step"> <span className="icon"> <i className="fa fa-usd"></i> </span> <span className="text">Đã thanh toán VNPAY</span> </div>
+                            : null
+                    }
                     {props.order.send ?
                         <div className="step active"> <span className="icon"> <i className="fa fa-truck"></i> </span> <span className="text">Đang giao</span> </div>
                         :

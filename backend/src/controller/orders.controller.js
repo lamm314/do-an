@@ -6,19 +6,30 @@ const {
     orderStatusUpdateService,
     cancelAnOrderService
 } = require('../service/orders.service');
+const { createPaymentURL } = require('../service/vnpay.service');
 const { emptyCartDb } = require('../db/cart.db');
+const { VNPAY_PAYMENT_METHOD } = require('../constants');
 
 
 const createOrder = async (req, res, next) => {
     const cart_id = req.user.cart_id;
     const user_id = req.user.user_id;
-    const { user_name, email, address, phone_number, note } = req.body;
-    // console.log(cart_id,user_id,user_name,email,address,phone_number);
-    const lastOrder = await createOrderService({ cart_id, user_id, user_name, email, address, phone_number, note });
+    const { user_name, email, address, phone_number, note, payment_method } = req.body;
+
+    const lastOrder = await createOrderService({ cart_id, user_id, user_name, email, address, phone_number, note, payment_method });
 
     await emptyCartDb(cart_id);// xoa toan bo cart sau khi order
 
-    return res.json({ lastOrder });
+    const response = {
+        lastOrder
+    }
+
+    if (payment_method == VNPAY_PAYMENT_METHOD) {
+        const vnpayUrl = await createPaymentURL(req, lastOrder[0].order_id);
+        response.vnpayUrl = vnpayUrl;
+    }
+
+    return res.json(response);
 }
 
 const getAllOrder = async (req, res, next) => {
@@ -56,13 +67,13 @@ const orderStatusUpdate = async (req, res, next) => {
     return res.json({ status, message: "order is updated" });
 }
 
-const  cancelAnOrder = async(req,res,next)=>{
+const cancelAnOrder = async (req, res, next) => {
     const user_id = req.user.user_id;
     const order_id = req.params.id;
 
-    console.log({user_id,order_id});
-    const status = await cancelAnOrderService({user_id,order_id});
-    return res.json({status,message:"Đơn hàng đã được xử lý !"});
+    console.log({ user_id, order_id });
+    const status = await cancelAnOrderService({ user_id, order_id });
+    return res.json({ status, message: "Đơn hàng đã được xử lý !" });
 
 }
 
