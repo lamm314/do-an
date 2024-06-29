@@ -38,14 +38,25 @@ const Login = () => {
 
         <div className="container">
              <div className="login-container">
-            <div className="image-gallery">
-             <div className="img1"></div>
-             <div className="img2"></div>
-             <div className="img3"></div>
-             <div className="img4"></div>
-             <div className="img5"></div>
-             <div className="img6"></div>
-            </div>
+             <div className="image-gallery">
+             
+    <div className="img1"></div>
+    <div className="img2"></div>
+    <div className="img3"></div>
+    <div className="img4"></div>
+    <div className="img5"></div>
+    <div className="img6"></div>
+    <div className="img7"></div>
+    <div className="img8"></div>
+    <div className="img9"></div>
+    <div className="img10"></div>
+    <div className="img11"></div>
+    <div className="img12"></div>
+
+
+</div>
+
+
         </div>
 
             <div className="title">

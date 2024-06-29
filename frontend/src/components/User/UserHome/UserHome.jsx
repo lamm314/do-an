@@ -1215,7 +1215,7 @@ const UserHome = () => {
                 data-id="1:234-text0"
               >
                 <span className="span0-J8tXXx inter-extra-light-fire-bush-32px" >
-                  <a href="/products/all">Xem</a>
+                  <a href="/products/all">Xem <br /> Thêm</a>
                 </span>
                 <span className="span1-J8tXXx inter-extra-light-fire-bush-32px">
                   <br />
@@ -1225,10 +1225,7 @@ const UserHome = () => {
                 className="text1-1234-IYTWyA inter-extra-light-fire-bush-32px"
                 data-id="1:234-text1"
               >
-                <span className="span2-k9qVWX inter-extra-light-fire-bush-32px">
-                <a href="/products/all">thêm</a>
-
-                </span>
+                
               </div>
             </div>
           
