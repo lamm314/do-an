@@ -1,0 +1,67 @@
+// Contact.scss
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 10%;
+  }
+  
+  .contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p strong {
+    font-weight: bold;
+  }
+  
+  .contact-info p a {
+    color: #4af47a;
+    text-decoration: none;
+  }
+  
+  .contact-info p a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #042567;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    position: relative;
+    margin-top: 4%;
+  }
+  
+  .contact-button:hover {
+    background-color: #53ff8d;
+  }
+  .contact-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+  }
+  

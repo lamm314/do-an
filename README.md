@@ -4,7 +4,7 @@ _Đảm bảo NodeJS 18.x.x đã được cài_
 
 ## Database
 
-- tạo database (MySQL) có tên kitty_shop (có thể tự đặt)
+- tạo database (MySQL) có tên con-ca-biet-di(có thể tự đặt)
 
 - vào file .env trong folder backend sửa lại theo đúng thông tin DB:
 
@@ -13,11 +13,11 @@ _Đảm bảo NodeJS 18.x.x đã được cài_
  DB_HOST=localhost
  DB_USER=root
  DB_PASS=root
- DB_NAME=kitty_shop
+ DB_NAME=con-ca-biet-di
  URL_REACT=http://localhost:3000
 ```
 
-- restore database bằng file database/kitty-shop.sql
+- restore database bằng file database/con-ca-biet-di.sql
 
 ## Run Backend
 

@@ -48,7 +48,7 @@ const UserHeader = (props) => {
                         <NavLink to="/" className="header__item--link header__item--home">Trang chủ</NavLink>
                     </div>
                     <div className="header__item">
-                        <NavLink to="/shop" className="header__item--link header__item--home">Cửa hàng</NavLink>
+                        <NavLink to="/gallery" className="header__item--link header__item--home">Triển lãm</NavLink>
                     </div>
                     <div className="header__item">
                         <NavLink to="/products/all" className="header__item--link header__item--product">

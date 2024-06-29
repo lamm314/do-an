@@ -22,7 +22,7 @@ import Test from "./components/Admin/Test/Test";
 import UsersInformation from "./components/Admin/UsersInformation/UsersInformation";
 import Checkout from "./components/User/Checkout/Checkout";
 import Profile from "./components/User/Profile/Profile";
-import Shop from "./components/User/Shop/Shop";
+import Gallery from "./components/User/Gallery/Gallery";
 import ScrollToTop from "./ScrollToTop";
 import ChangePassword from "./components/User/ChangePassword/ChangePassword";
 import OrdersHistory from "./components/User/OrdersHistory/OrdersHistory";
@@ -106,7 +106,7 @@ function App() {
           <Route path="/tutorial/contact" element={<Contact />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
-          <Route path="/shop" element={<Shop />}></Route>
+          <Route path="/gallery" element={<Gallery />}></Route>
           <Route
             path="/cart"
             element={

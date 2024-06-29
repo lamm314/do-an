@@ -1,18 +1,31 @@
 @import '../../../style/variable.scss';
 
-.introduce{
-    font-size: 1.5rem;
-    margin-top: calc(#{$header-height} + 80px);
-    margin-bottom: 8px;
-    .title{
-        color: white; 
-        text-align: left;
-        font-size: 3rem;
-        margin-bottom: 40px;
-        font-weight: 700;
-    }
-    .description{
-       padding-top: 20%;
-        color: white;
-    }
-}
+// introduce.scss
+
+.introduce-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 16%;
+  }
+  
+  .introduce-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .introduce-text {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  

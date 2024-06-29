@@ -242,6 +242,7 @@ const Register = () => {
                                 <div className='err-message'>{err}</div>
 
                                 <div className="clearfix action_account_custommer">
+                                    
                                     <div className="action_bottom button dark" id="register">
                                         <input className="btn2" type="submit" value="Đăng ký" onClick={(e) => handleRegister(e)} />
                                     </div>

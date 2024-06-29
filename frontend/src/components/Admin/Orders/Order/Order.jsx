@@ -6,6 +6,7 @@ import { createAxios } from "../../../../createInstance";
 import { deleteOrder, getAllOrders, getAllProductsFromAPI, orderStatusUpdate } from "../../../../redux/apiRequest";
 import Item from "../../../User/OrdersHistory/Card/Item/Item";
 import './Order.scss'
+import { VNPAY_PAYMENT_METHOD } from '../../../../constants';
 
 const Order = (props) => {
     const user = useSelector((state) => state.auth.login.currentUser);
@@ -61,13 +62,24 @@ const Order = (props) => {
                 </div>
                 <div className="track">
                     <div className="step active"> <span className="icon"> <i className="fa fa-check"></i> </span> <span className="text">Xác nhận đơn hàng</span> </div>
+                   
+                    
                     {/* <div className="step active"> <span className="icon"> <i className="fa fa-user"></i> </span> <span className="text">Lấy hàng</span> </div> */}
+                    {
+                        (props.order.payment_method === VNPAY_PAYMENT_METHOD && props.order.paid === 1)
+                        ? <div className="step active"> <span className="icon"> <i className="fa fa-usd"></i> </span> <span className="text">Đã thanh toán VNPAY</span> </div>
+                        : (props.order.payment_method === VNPAY_PAYMENT_METHOD && props.order.paid === 0)
+                            ? <div className="step"> <span className="icon"> <i className="fa fa-usd"></i> </span> <span className="text">Đã thanh toán VNPAY</span> </div>
+                            : null
+                    }
+                     
                     {props.order.send ?
                         <div className="step active"> <span className="icon" onClick={() => handleUpdateSend()}> <i className="fa fa-truck"></i> </span> <span className="text">Đang giao</span> </div>
                         :
                         <div className="step "> <span className="icon" onClick={() => handleUpdateSend()}> <i className="fa fa-truck"></i> </span> <span className="text">Đang giao</span> </div>
 
                     }
+                   
                     {
                         props.order.success ?
                             <div className="step active"> <span className="icon" onClick={() => handleUpdateSuccess()}> <i className="fa fa-box"></i> </span> <span className="text">Đã Nhận</span> </div>
